@@ -1,0 +1,71 @@
+{
+  "name": "electron-nextjs-starter-app",
+  "version": "1.0a",
+  "main": "electron/main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "next dev",
+    "build:next": "next build",
+    "build:electron": "electron-builder",
+    "build": "npm run build:next && npm run build:electron",
+    "postinstall": "electron-builder install-app-deps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "com.example.starter.app",
+    "productName": "electron-nextjs-starter-app",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "node_modules/**/*",
+      "electron/**/*",
+      "out/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "warningsAsErrors": false,
+      "oneClick": false,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build_assets/icon.ico",
+      "uninstallerIcon": "build_assets/uninstall.ico",
+      "uninstallDisplayName": "electron-nextjs-starter-app"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "icon": "build_assets/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Utility"
+    }
+  },
+  "author": "goodsie",
+  "license": "MIT",
+  "description": "electron-nextjs-starter-app",
+  "devDependencies": {
+    "@types/uuid": "^10.0.0",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.6.2",
+    "uuid": "^10.0.0"
+  },
+  "dependencies": {
+    "electron-prompt": "^1.7.0",
+    "electron-serve": "^2.1.1",
+    "next": "^15.2.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}

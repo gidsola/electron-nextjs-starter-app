@@ -75,6 +75,6 @@ Once you have successfully got the app running, you will be greeted with a congr
 
 ## Sharing Knowledge
 
-We believe in the power of sharing knowledge. This starter app is not just a tool but a community effort to make desktop application development more accessible. If you have any questions, suggestions, or just want to share your progress, feel free to reach out.
+I believe in the power of sharing knowledge. This starter app is not just a tool but a community effort to make desktop application development more accessible. If you have any questions, suggestions, or just want to share your progress, feel free to reach out.
 
 **Happy coding! 🚀**
